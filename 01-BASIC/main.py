@@ -280,11 +280,11 @@
 
 # A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
 
 # print(thisdict["brand"])
 
@@ -312,25 +312,25 @@ thisdict = {
 # thisdict.update({"year":2025})
 # print(thisdict)
 
-myFamily={
-    "chield1":{
-        "name":"person1",
-        "email":"person1@gmail.com"
-    },
-    "chield2":{
-        "name":"person2",
-        "email":"person2@gmail.com"
-    },
-    "chield3":{
-        "name":"person3",
-        "email":"person3@gmail.com"
-    }
-}
+# myFamily={
+#     "chield1":{
+#         "name":"person1",
+#         "email":"person1@gmail.com"
+#     },
+#     "chield2":{
+#         "name":"person2",
+#         "email":"person2@gmail.com"
+#     },
+#     "chield3":{
+#         "name":"person3",
+#         "email":"person3@gmail.com"
+#     }
+# }
 
-# print(myFamily["chield3"]["name"])
+# # print(myFamily["chield3"]["name"])
 
-for x,obj in myFamily.items():
-    print(x)
+# for x,obj in myFamily.items():
+#     print(x)
 
-    for y in obj:
-        print(f"{y} : {obj[y]}")
+#     for y in obj:
+#         print(f"{y} : {obj[y]}")
