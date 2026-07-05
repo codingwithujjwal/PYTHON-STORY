@@ -123,34 +123,110 @@
 # Python Inheritance
 
 
-class Person:
-    def __init__(self, fname, lname):
-        self.fname = fname
-        self.lname = lname
+# class Person:
+#     def __init__(self, fname, lname):
+#         self.fname = fname
+#         self.lname = lname
 
-    def printName(self):
-        print(f"Hi my first name is {self.fname} and last name is {self.lname}")
-
-
-x = Person("John", "Doe")
-
-x.printName()
+#     def printName(self):
+#         print(f"Hi my first name is {self.fname} and last name is {self.lname}")
 
 
-class Student(Person):
-    def __init__(self, fname, lname):
-        super().__init__(fname, lname)
-        self.graduationyear = 2020
+# x = Person("John", "Doe")
 
-    def Welcome(self):
-        print(
-            f"Welcome {self.fname} {self.lname}, to the class of {self.graduationyear}"
-        )
+# x.printName()
 
 
-y = Student("Mike", "Olsen")
-# y.printName()
-# print(y.graduationyear)
+# class Student(Person):
+#     def __init__(self, fname, lname):
+#         super().__init__(fname, lname)
+#         self.graduationyear = 2020
 
-# print(y.Welcome())
-y.Welcome()
+#     def Welcome(self):
+#         print(
+#             f"Welcome {self.fname} {self.lname}, to the class of {self.graduationyear}"
+#         )
+
+
+# y = Student("Mike", "Olsen")
+# # y.printName()
+# # print(y.graduationyear)
+
+# # print(y.Welcome())
+# y.Welcome()
+
+
+# ----------------------------Class Polymorphism--------------------------------------------
+
+
+# class Car:
+#     def __init__(self, brand, model):
+#         self.brand = brand
+#         self.model = model
+
+#     def move(self):
+#         print("Drive")
+
+
+# class Boat:
+#     def __init__(self, brand, model):
+#         self.brand = brand
+#         self.model = model
+
+#     def move(self):
+#         print("Sail")
+
+
+# class Plane:
+#     def __init__(self, brand, model):
+#         self.brand = brand
+#         self.model = model
+
+#     def move(self):
+#         print("Fly")
+
+
+# car1 = Car("Ford", "Mustang")  # Create a Car object
+# boat1 = Boat("Ibiza", "Touring 20")  # Create a Boat object
+# plane1 = Plane("Boeing", "747")  # Create a Plane object
+
+
+# for x in (car1, boat1, plane1):
+#     x.move()
+
+
+# ----------------------------------Inheritance Class Polymorphism--------------------------
+
+
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Move")
+
+
+class Car(Vehicle):
+    def move(self):
+        print("Drive")
+
+
+class Boat(Vehicle):
+    def move(self):
+        print("Sail")
+
+
+class Plane(Vehicle):
+    def move(self):
+        print("Fly")
+
+
+car1 = Car("Ford", "Mustang")  # Create a Car object
+boat1 = Boat("Ibiza", "Touring 20")  # Create a Boat object
+plane1 = Plane("Boeing", "747")  # Create a Plane object
+
+for x in (car1, boat1, plane1):
+    print(x.model)
+    print(x.brand)
+    x.move()
